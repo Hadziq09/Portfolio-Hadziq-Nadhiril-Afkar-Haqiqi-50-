@@ -1,0 +1,131 @@
+/* Import Google Fonts (Poppins) agar tulisan lebih modern */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0f1016; /* Latar belakang gelap */
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(15, 16, 22, 0.9); /* Sedikit transparan */
+    backdrop-filter: blur(10px); /* Efek blur ala glassmorphism */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.logo a {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.logo a span {
+    color: #00d2ff; 
+}
+
+/* Styling List Menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #c4c4c4;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Hover */
+.nav-links li a:hover {
+    color: #00d2ff;
+}
+
+/* Efek garis bawah hover */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #00d2ff;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .nav-links {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.profil-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-text {
+    text-align: left;
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    margin:auto 0 10px;
+}
+
+.education {
+    padding: 50px 20px;
+    text-align: flex;
+}
